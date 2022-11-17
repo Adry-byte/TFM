@@ -23,8 +23,9 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A)) transform.position -= transform.right * Time.deltaTime * movementSpeed;
         if (Input.GetKey(KeyCode.D)) transform.position += transform.right * Time.deltaTime * movementSpeed;
 
-        float angle = horizontalSpeed * Input.GetAxis("Mouse X");
-        transform.Rotate(0, angle, 0);
+        float angle1 = horizontalSpeed * Input.GetAxis("Mouse X");
+        float angle2 = horizontalSpeed * Input.GetAxis("Mouse Y");
+        transform.Rotate(0, angle1, 0);
 
     }
 }
